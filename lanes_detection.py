@@ -25,7 +25,7 @@ def average_slope_intercept(image, lines):
                 left_fit.append((slope, intercept))
             else:
                 right_fit.append((slope, intercept))
-    # add more weight to longer lines
+
     left_fit_average = np.average(left_fit, axis=0)
     right_fit_average = np.average(right_fit, axis=0)
     left_line = make_points(image, left_fit_average)
